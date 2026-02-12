@@ -37,6 +37,81 @@ body {
       rgb(240, 240, 240));
 }
 
+.romantic-message {
+  position: fixed;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  text-align: center;
+  opacity: 0;
+  animation: fade-in-message 3s 6s forwards;
+}
+
+.romantic-message p {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 2.2vmin;
+  line-height: 1.8;
+  color: #ffffff;
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.6),
+    0 0 30px rgba(255, 215, 0, 0.4),
+    2px 2px 4px rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.5px;
+  padding: 2vmin 3vmin;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  border: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+.romantic-message .forever {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 2.5vmin;
+  color: #ffd700;
+  text-shadow:
+    0 0 15px rgba(255, 215, 0, 1),
+    0 0 25px rgba(255, 215, 0, 0.8),
+    0 0 35px rgba(255, 215, 0, 0.6),
+    2px 2px 4px rgba(0, 0, 0, 0.9);
+  display: inline-block;
+  animation: gentle-glow 3s ease-in-out infinite;
+}
+
+@keyframes fade-in-message {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes gentle-glow {
+
+  0%,
+  100% {
+    text-shadow:
+      0 0 15px rgba(255, 215, 0, 1),
+      0 0 25px rgba(255, 215, 0, 0.8),
+      0 0 35px rgba(255, 215, 0, 0.6),
+      2px 2px 4px rgba(0, 0, 0, 0.9);
+  }
+
+  50% {
+    text-shadow:
+      0 0 20px rgba(255, 215, 0, 1),
+      0 0 30px rgba(255, 215, 0, 1),
+      0 0 45px rgba(255, 215, 0, 0.8),
+      2px 2px 4px rgba(0, 0, 0, 0.9);
+  }
+}
+
 .flowers {
   position: relative;
   transform: scale(0.9);
